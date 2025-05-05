@@ -1,13 +1,13 @@
 package Atividade03;
 
 public class Musica {
-    public String titulo;
-    public String artista;
-    public int anoLancamento;
-    public double avaliacao;
-    public int numAvaliacoes;
+    String titulo;
+    String artista;
+    int anoLancamento;
+    double avaliacao;
+    int numAvaliacoes;
 
-    public void exibirFichaTecnica() {
+    void exibirFichaTecnica() {
         System.out.println("-------- Ficha Técnica --------");
         System.out.println("Nome: " + titulo);
         System.out.println("Artista: " + artista);
@@ -17,13 +17,12 @@ public class Musica {
         System.out.println("-------------------------------");
     }
 
-    public void avalia(double nota) {
+    void avalia(double nota) {
         avaliacao += nota;
         numAvaliacoes++;
     }
 
-    public double obterMedia() {
+    double obterMedia() {
         return avaliacao / numAvaliacoes;
     }
-
 }
