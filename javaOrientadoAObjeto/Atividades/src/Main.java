@@ -1,6 +1,7 @@
 import Atividade01.Pessoa;
 import Atividade02.Calculadora;
 import Atividade03.Musica;
+import Atividade04.Carro;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,10 +9,14 @@ public class Main {
         Pessoa pessoa = new Pessoa();
         pessoa.mensagem();
 
+        System.out.println("\n");
+
         // Atividade 2
         Calculadora calculadora = new Calculadora();
         int resultado = calculadora.calcular(5);
         System.out.println(resultado);
+
+        System.out.println("\n");
 
         // Atividade 3
         Musica musica = new Musica();
@@ -22,5 +27,14 @@ public class Main {
         musica.avalia(8.5);
         musica.avalia(5.6);
         musica.exibirFichaTecnica();
+
+        System.out.println("\n");
+        
+        // Atividade 4
+        Carro carro = new Carro();
+        carro.modelo = "Toyota Corlla XEi";
+        carro.cor = "Prata metálico";
+        carro.anoFabricacao = 2022;
+        carro.exibirFichaTecnica();
     }
 }
