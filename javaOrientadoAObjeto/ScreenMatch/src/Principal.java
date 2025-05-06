@@ -1,16 +1,19 @@
+import br.com.alura.screenmatch.modelos.Filme;
+
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.nome = "O poderoso chefão";
-        meuFilme.anoDeLacamento = 1972;
-        meuFilme.duracaoEmMinutos = 180;
+        Filme filme = new Filme();
 
-        meuFilme.exibeFichaTecnica();
-        meuFilme.avalia(8);
-        meuFilme.avalia(5);
-        meuFilme.avalia(10);
-        System.out.println(meuFilme.somaDasAvaliacoes);
-        System.out.println(meuFilme.totalAvaliacoes);
-        System.out.println(meuFilme.obterMedia());
+        filme.setNome("Scarface");
+        filme.setAnoDeLacamento(1983);
+        filme.setDuracaoEmMinutos(170);
+        filme.setInluidoNoPlano(true);
+
+        filme.exibeFichaTecnica();
+        filme.avalia(9);
+        filme.avalia(8);
+        filme.avalia(9);
+
+        System.out.println("Média de avaliações do filme: " + filme.obterMedia());
     }
 }
