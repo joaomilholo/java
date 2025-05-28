@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Filme filme = new Filme();
@@ -50,5 +52,19 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
+        var filme3 = new Filme();
+        filme3.setNome("Scarface");
+        filme3.setDuracaoEmMinutos(170);
+        filme3.setAnoDeLacamento(1984);
+        filme3.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filme3);
+        listaDeFilmes.add(filme);
+        listaDeFilmes.add(filme2);
+        System.out.println("Tamanho da lita " + listaDeFilmes.size());
+        System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
+        System.out.println("toString do filme " + listaDeFilmes.get(0).toString());
     }
 }
